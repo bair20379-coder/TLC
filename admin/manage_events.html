@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tamil Information Centre - Manage Events">
+    <meta name="keywords" content="Tamil Information Centre, Admin, Events, Manage Content">
+    <title>Tamil Information Centre :: Manage Events</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+        .sidebar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 250px;
+            background-color: #8b0000;
+            padding-top: 20px;
+            color: white;
+            transition: transform 0.3s ease-in-out;
+            z-index: 1000;
+        }
+        .sidebar a {
+            color: white;
+            display: flex;
+            align-items: center;
+            padding: 10px 20px;
+            text-decoration: none;
+        }
+        .sidebar a i {
+            margin-right: 10px;
+        }
+        .sidebar a:hover {
+            background-color: #ffd700;
+            color: #8b0000;
+        }
+        .sidebar .active {
+            background-color: #ffd700;
+            color: #8b0000;
+        }
+        .main-content {
+            margin-left: 250px;
+            padding: 20px;
+            transition: margin-left 0.3s ease-in-out;
+        }
+        .header {
+            background-color: #8b0000;
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .header .logout-btn {
+            background-color: #ffd700;
+            color: #8b0000;
+            border: none;
+        }
+        .header .logout-btn:hover {
+            background-color: #e6c200;
+        }
+        .hamburger {
+            display: none;
+            font-size: 24px;
+            background: none;
+            border: none;
+            color: white;
+        }
+        .card {
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        .card h4 {
+            display: flex;
+            align-items: center;
+        }
+        .card h4 i {
+            margin-right: 10px;
+        }
+        .table-responsive {
+            overflow-x: auto;
+        }
+        .table th, .table td {
+            vertical-align: middle;
+        }
+        .action-btn {
+            background-color: #ffd700;
+            color: #8b0000;
+            border: none;
+            margin-right: 5px;
+        }
+        .action-btn:hover {
+            background-color: #e6c200;
+        }
+        @media (max-width: 768px) {
+            .sidebar {
+                transform: translateX(-250px);
+            }
+            .sidebar-active {
+                transform: translateX(0);
+            }
+            .main-content {
+                margin-left: 0;
+            }
+            .hamburger {
+                display: block;
+            }
+            .header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .header div {
+                margin-top: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar">
+        <h4 class="text-center">Admin Dashboard</h4>
+        <a href="admin_dashboard.html"><i class="bi bi-house"></i> Overview</a>
+        <a href="manage_events.html" class="active"><i class="bi bi-calendar-event"></i> Manage Events</a>
+        <a href="manage_shop.html"><i class="bi bi-shop"></i> Manage Shop Items</a>
+        <a href="manage_inquiries.html"><i class="bi bi-envelope"></i> Manage Contact Inquiries</a>
+        <a href="manage_memberships.html"><i class="bi bi-person-plus"></i> Manage Memberships</a>
+        <a href="manage_archives.html"><i class="bi bi-archive"></i> Manage Archives</a>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content" id="main-content">
+        <!-- Header -->
+        <div class="header">
+            <div>
+                <button class="hamburger" id="hamburger" aria-label="Toggle Sidebar">
+                    <i class="bi bi-list"></i>
+                </button>
+                <h3 class="d-inline ms-3">Tamil Information Centre - Manage Events</h3>
+            </div>
+            <div>
+                <span>Welcome, Admin</span>
+                <a href="index.html" class="btn logout-btn ms-3">Logout</a>
+            </div>
+        </div>
+
+        <!-- Manage Events Section -->
+        <div class="card">
+            <h4><i class="bi bi-calendar-event"></i> Manage Events</h4>
+            <div class="table-responsive">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Title</th>
+                            <th>Date</th>
+                            <th>Description</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Tamil Cultural Festival</td>
+                            <td>25/09/2025</td>
+                            <td>Celebration of Tamil music and dance</td>
+                            <td>
+                                <button class="btn action-btn btn-sm">Edit</button>
+                                <button class="btn action-btn btn-sm">Delete</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Heritage Workshop</td>
+                            <td>30/09/2025</td>
+                            <td>Hands-on activities and expert talks</td>
+                            <td>
+                                <button class="btn action-btn btn-sm">Edit</button>
+                                <button class="btn action-btn btn-sm">Delete</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and Sidebar Toggle Script -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const hamburger = document.getElementById('hamburger');
+            const sidebar = document.getElementById('sidebar');
+            const mainContent = document.getElementById('main-content');
+
+            // Ensure sidebar is collapsed on mobile by default
+            if (window.innerWidth <= 768) {
+                sidebar.classList.remove('sidebar-active');
+                mainContent.classList.add('main-content-expanded');
+            }
+
+            hamburger.addEventListener('click', () => {
+                sidebar.classList.toggle('sidebar-active');
+                mainContent.classList.toggle('main-content-expanded');
+            });
+        });
+    </script>
+</body>
+</html>
