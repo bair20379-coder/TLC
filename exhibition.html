@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Tamil Information Centre - Exhibition & Heritage Centre for Tamil Culture and History"
+    />
+    <meta
+      name="keywords"
+      content="Tamil Information Centre, Tamils of Lanka, Heritage Centre, Tamil History, Workshops"
+    />
+    <title>Tamil Information Centre :: Exhibition & Heritage Centre</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Google Fonts for Tamil (Noto Serif Tamil) -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif+Tamil:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Noto Serif Tamil", serif;
+        font-size: small;
+        background-color: #f8f9fa;
+        color: #333;
+      }
+      .navbar {
+        background-color: #8b0000; /* Deep red reflecting Tamil cultural colors */
+      }
+      .navbar-brand,
+      .nav-link {
+        color: #fff !important;
+      }
+      .nav-link:hover {
+        color: #ffd700 !important; /* Gold hover effect for Tamil cultural aesthetic */
+      }
+      .header-section {
+        background-color: #8b0000;
+        color: white;
+        padding: 50px 0;
+        text-align: center;
+      }
+      .content-section {
+        padding: 40px 0;
+      }
+      .content-section img {
+        width: 100%;
+        height: auto;
+        max-height: 300px;
+        object-fit: cover;
+        border-radius: 5px;
+        margin-bottom: 20px;
+      }
+      .timeline {
+        position: relative;
+        padding: 20px 0;
+      }
+      .timeline-item {
+        margin-bottom: 20px;
+        padding-left: 30px;
+        border-left: 2px solid #8b0000;
+        position: relative;
+      }
+      .timeline-item::before {
+        content: "";
+        width: 12px;
+        height: 12px;
+        background-color: #ffd700;
+        border-radius: 50%;
+        position: absolute;
+        left: -6px;
+        top: 0;
+      }
+      .workshop-section {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+      .guide-btn,
+      .submit-btn {
+        background-color: #ffd700;
+        color: #8b0000;
+        border: none;
+      }
+      .guide-btn:hover,
+      .submit-btn:hover {
+        background-color: #e6c200;
+      }
+      .lang-switcher {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+      }
+      .lang-switcher a {
+        color: #fff;
+        text-decoration: none;
+        margin-left: 10px;
+      }
+      .lang-switcher a:hover {
+        color: #ffd700;
+      }
+      footer {
+        background-color: #8b0000;
+        color: white;
+        padding: 20px 0;
+      }
+      .tamil-text {
+        font-family: "Noto Serif Tamil", serif;
+      }
+      @media (max-width: 768px) {
+        .header-section {
+          padding: 30px 0;
+        }
+        .content-section img {
+          max-height: 200px;
+        }
+        .timeline-item {
+          padding-left: 20px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Toast Container -->
+    <div id="toast-container" class="toast-container"></div>
+    <!-- Language Switcher -->
+    <div class="lang-switcher">
+      <a href="#" onclick="switchLanguage('en')">English</a> |
+      <a href="#" onclick="switchLanguage('ta')">தமிழ்</a>
+    </div>
+
+    <!-- Nav bar style -->
+    <style>
+      .navbar {
+        background-color: #8b0000; /* Deep red reflecting Tamil cultural colors */
+      }
+      /* Show dropdown on hover for nav bar */
+      .navbar-nav .dropdown:hover .dropdown-menu {
+        display: block;
+        margin-top: 0;
+      }
+      .navbar-nav .dropdown-menu {
+        margin-top: 0;
+      }
+
+      .navbar-brand,
+      .nav-link {
+        color: #fff !important;
+      }
+      .nav-link:hover {
+        color: #ffd700 !important; /* Gold hover effect for Tamil cultural aesthetic */
+      }
+    </style>
+
+    <!-- Navigation -->
+     <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Tamil Information Centre</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">முகப்பு</a>
+          </li>
+
+          <!-- ABOUT US -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="archiveDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">எங்களைப் பற்றி</a>
+
+            <ul class="dropdown-menu" aria-labelledby="archiveDropdown">
+              <li>
+                <a class="dropdown-item" href="about.html">எங்களைப் பற்றி</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="support.html">ஆதரவு தாருங்கள்</a>
+              </li>
+
+              <li>
+                <a class="dropdown-item" href="arts.html">கலை & பாரம்பரியம்</a>
+              </li>
+            </ul>
+          </li>
+
+          <!-- NEWS -->
+          <li class="nav-item">
+            <a class="nav-link" href="updates.html">செய்திகள்</a>
+          </li>
+
+          <!-- ARCHIVE CENTRE -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="archiveDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">ஆவண மையம்</a>
+            <ul class="dropdown-menu" aria-labelledby="archiveDropdown">
+              <li>
+                <a class="dropdown-item" href="archive.html">தொகுப்பு</a>
+              </li>
+              <li><a class="dropdown-item" href="identity.html">அடையாளப் பட்டியல்</a></li>
+              
+            </ul>
+          </li>
+
+          <!-- EXHIBITION & HERITAGE CENTRE -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="exhibitionDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">காட்சிப்பொறி மற்றும் பாரம்பரிய மையம்</a>
+            <ul class="dropdown-menu" aria-labelledby="exhibitionDropdown">
+              <li>
+                <a class="dropdown-item" href="exhibition.html">ToL காட்சி</a>
+              </li>
+              <li><a class="dropdown-item" href="culture.html">பாரம்பரிய மையம்</a></li>
+              <li><a class="dropdown-item" href="thing.html">பொருள் வழிகாட்டிகள்</a></li>
+              <li>
+                <a class="dropdown-item" href="history.html">வரலாற்று காலவரிசை</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="edu.html">கற்றல் பணிமுறைகள்</a>
+              </li>
+            </ul>
+          </li>
+
+          <!-- WHAT'S ON< -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="whatsOnDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">நிகழ்ச்சிகள்</a>
+            <ul class="dropdown-menu" aria-labelledby="whatsOnDropdown">
+              <li><a class="dropdown-item" href="resent.html">சமீபத்திய நிகழ்வுகள்</a></li>
+              <li>
+                <a class="dropdown-item" href="plan.html">திட்டங்கள் மற்றும் நிகழ்ச்சிகள்</a>
+              </li>
+              <li><a class="dropdown-item" href="help.html">ஒத்துழைப்பு</a></li>
+            </ul>
+          </li>
+
+          <!-- JOIN -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="joinDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">இணையவும்</a>
+            <ul class="dropdown-menu" aria-labelledby="joinDropdown">
+              <li>
+                <a class="dropdown-item" href="join.html">உறுப்பினர் பதிவு</a>
+              </li>
+              <li><a class="dropdown-item" href="donate.html">நன்கொடை</a></li>
+            </ul>
+          </li>
+
+          <!-- SHOP -->
+          <li class="nav-item">
+            <a class="nav-link" href="shop.html">கடை</a>
+          </li>
+
+          <!-- CONTACT -->
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">தொடர்பு</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+    <!-- Header Section -->
+    <section class="header-section">
+      <div class="container">
+        <h1 class="tamil-text">கண்காட்சி மற்றும் பாரம்பரிய மையம்</h1>
+        <h2>Exhibition & Heritage Centre</h2>
+        <p>
+          Discover Tamil history and culture through our exhibitions and
+          educational programs
+        </p>
+      </div>
+    </section>
+
+    <!-- Search Bar -->
+    <section class="container my-4">
+      <div class="row">
+        <div class="col-md-6 mx-auto">
+          <form class="d-flex">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Search..."
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-success" type="submit">
+              Search
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Content Section -->
+    <section class="content-section container">
+      <div class="row">
+        <div class="col-md-8 mx-auto">
+          <!-- Tamils of Lanka Exhibition -->
+          <h3 class="tamil-text">இலங்கைத் தமிழர் கண்காட்சி</h3>
+          <h4>Tamils of Lanka Exhibition</h4>
+          <img
+            src="images/lanka1.jpg"
+            alt="Tamils of Lanka Exhibition"
+            onerror="this.src='https://via.placeholder.com/800x300?text=Tamils+of+Lanka';"
+          />
+          <p>
+            The Tamils of Lanka exhibition showcases the rich history, culture,
+            and resilience of the Tamil people of Sri Lanka. Featuring
+            artifacts, photographs, and interactive displays, this exhibition
+            offers a deep dive into Tamil heritage from ancient times to the
+            present.
+          </p>
+
+          <!-- Heritage Centre -->
+          <h3 class="tamil-text">பாரம்பரிய மையம்</h3>
+          <h4>Heritage Centre</h4>
+          <p>
+            Our Heritage Centre, both physical and virtual, serves as a hub for
+            preserving and sharing Tamil culture. Visit our physical location in
+            [City, Country] or explore our virtual tours online to engage with
+            interactive exhibits and educational resources.
+          </p>
+
+          <!-- Subject Guides -->
+          <h3 class="tamil-text">பாட வழிகாட்டிகள்</h3>
+          <h4>Subject Guides</h4>
+          <p>
+            Access our subject guides to learn more about Tamil history,
+            culture, and human rights. These guides are designed for students,
+            researchers, and enthusiasts.
+          </p>
+          <ul>
+            <li>
+              <a
+                href="/guides/tamil_history.pdf"
+                class="btn guide-btn btn-sm"
+                target="_blank"
+                >Tamil History Guide</a
+              >
+            </li>
+            <li>
+              <a
+                href="/guides/tamil_culture.pdf"
+                class="btn guide-btn btn-sm"
+                target="_blank"
+                >Tamil Culture Guide</a
+              >
+            </li>
+            <li>
+              <a
+                href="/guides/human_rights.pdf"
+                class="btn guide-btn btn-sm"
+                target="_blank"
+                >Human Rights Guide</a
+              >
+            </li>
+          </ul>
+
+          <!-- Historical Timeline -->
+          <h3 class="tamil-text">வரலாற்று காலவரிசை</h3>
+          <h4>Historical Timeline</h4>
+          <div class="timeline">
+            <div class="timeline-item">
+              <h5>1948</h5>
+              <p>
+                Sri Lanka gains independence, marking the start of modern Tamil
+                political movements.
+              </p>
+            </div>
+            <div class="timeline-item">
+              <h5>1983</h5>
+              <p>
+                Tamil Information Centre is established to advocate for Tamil
+                rights.
+              </p>
+            </div>
+            <div class="timeline-item">
+              <h5>2009</h5>
+              <p>
+                End of the Sri Lankan Civil War, prompting increased focus on
+                Tamil heritage preservation.
+              </p>
+            </div>
+          </div>
+
+          <!-- Workshops -->
+          <div class="workshop-section mt-4">
+            <h3 class="tamil-text">பயிலரங்குகள்</h3>
+            <h4>Learning Workshops</h4>
+            <p>
+              Join our educational workshops to learn about Tamil culture,
+              history, and human rights. Sign up below for upcoming sessions.
+            </p>
+            <div class="row">
+              <div class="col-md-6">
+                <h5>Workshop: Tamil Language Basics</h5>
+                <p>Date: 15/09/2025 (Monday)</p>
+                <p>
+                  Learn the fundamentals of the Tamil language in this
+                  interactive session.
+                </p>
+                <form action="/submit-workshop" method="post">
+                  <div class="mb-3">
+                    <label for="workshopName1" class="form-label">Name</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="workshopName1"
+                      name="name"
+                      placeholder="Enter your name"
+                      required
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <label for="workshopEmail1" class="form-label">Email</label>
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="workshopEmail1"
+                      name="email"
+                      placeholder="Enter your email"
+                      required
+                    />
+                  </div>
+                  <input
+                    type="hidden"
+                    name="workshop"
+                    value="Tamil Language Basics"
+                  />
+                  <button type="submit" class="btn submit-btn">Sign Up</button>
+                </form>
+              </div>
+              <div class="col-md-6">
+                <h5>Workshop: Tamil History Overview</h5>
+                <p>Date: 20/09/2025 (Saturday)</p>
+                <p>
+                  Explore key events in Tamil history with expert-led
+                  discussions.
+                </p>
+                <form action="/submit-workshop" method="post">
+                  <div class="mb-3">
+                    <label for="workshopName2" class="form-label">Name</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="workshopName2"
+                      name="name"
+                      placeholder="Enter your name"
+                      required
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <label for="workshopEmail2" class="form-label">Email</label>
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="workshopEmail2"
+                      name="email"
+                      placeholder="Enter your email"
+                      required
+                    />
+                  </div>
+                  <input
+                    type="hidden"
+                    name="workshop"
+                    value="Tamil History Overview"
+                  />
+                  <button type="submit" class="btn submit-btn">Sign Up</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center">
+      <div class="container">
+        <p class="tamil-text">
+          தமிழ் தகவல் மையம் &copy; 2025, All rights reserved.
+        </p>
+        <p>
+          <a href="#" class="text-white">Sitemap</a> |
+          <a href="#" class="text-white">Privacy Policy</a> |
+          <a href="#" class="text-white">Terms and Conditions</a>
+        </p>
+        <p>
+          <a href="#" class="text-white mx-2">Facebook</a>
+          <a href="#" class="text-white mx-2">YouTube</a>
+          <a href="#" class="text-white mx-2">Twitter</a>
+        </p>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JS and Language Switcher Script -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      function switchLanguage(lang) {
+        // Placeholder for language switching logic
+        alert("Switching to " + (lang === "en" ? "English" : "Tamil"));
+        // Implement actual language switching logic here
+      }
+    </script>
+  </body>
+</html>

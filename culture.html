@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="ta">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>TIC | பாரம்பரிய மையம் (Heritage Centre)</title>
+  <meta name="description" content="Tamil Information Centre – Heritage Centre highlighting Tamil cultural history, arts, artifacts, documents, and oral histories." />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Tamil:wght@400;600;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #b5b7bd;
+      --card: #151923;
+      --accent: #8b5cf6;
+      --accent-2: #22d3ee;
+      --text: #e7e9ee;
+      --muted: #aab0bf;
+      --line: #3d60b1;
+      --radius: 18px;
+      --shadow: 0 10px 30px rgba(0, 0, 0, .25)
+    }
+
+       *{box-sizing:border-box}
+
+    body {
+      font-family: "Noto Serif Tamil", serif;
+      font-size: small;
+      background-color: #f8f9fa;
+      color: #333;
+    }
+
+    .navbar {
+      background-color: #8b0000;
+      /* Deep red reflecting Tamil cultural colors */
+    }
+
+    .navbar-brand,
+    .nav-link {
+      color: #fff !important;
+    }
+
+    .nav-link:hover {
+      color: #ffd700 !important;
+      /* Gold hover effect for Tamil cultural aesthetic */
+    }
+
+    .header-section {
+      background-color: #8b0000;
+      color: white;
+      padding: 50px 0;
+      text-align: center;
+    }
+
+    .content-section {
+      padding: 40px 0;
+    }
+
+    .content-section img {
+      width: 100%;
+      height: auto;
+      max-height: 300px;
+      object-fit: cover;
+      border-radius: 5px;
+      margin-bottom: 20px;
+    }
+
+    .donate-btn {
+      background-color: #ffd700;
+      color: #8b0000;
+      border: none;
+    }
+
+    .donate-btn:hover {
+      background-color: #e6c200;
+    }
+
+    .lang-switcher {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+    }
+
+    .lang-switcher a {
+      color: #fff;
+      text-decoration: none;
+      margin-left: 10px;
+    }
+
+    .lang-switcher a:hover {
+      color: #ffd700;
+    }
+
+    footer {
+      background-color: #8b0000;
+      color: white;
+      padding: 20px 0;
+    }
+
+    .tamil-text {
+      font-family: "Noto Serif Tamil", serif;
+    }
+
+    @media (max-width: 768px) {
+      .header-section {
+        padding: 30px 0;
+      }
+
+      .content-section img {
+        max-height: 200px;
+      }
+    }
+
+
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--bg);color:var(--text);font-family:"Noto Sans Tamil", Inter,sans-serif}
+    a{color:inherit;text-decoration:none}
+    /* .container{width:min(1100px,92vw);margin-inline:auto} */
+    header{position:sticky;top:0;z-index:50;background:rgba(15,17,21,.85);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);padding:12px 0}
+    .nav{display:flex;align-items:center;justify-content:space-between}
+    .brand{display:flex;gap:10px;align-items:center;font-weight:700}
+    .brand i{width:36px;height:36px;border-radius:10px;background:linear-gradient(135deg,var(--accent),var(--accent-2));display:inline-grid;place-items:center;color:#081018}
+    .nav a.link{padding:8px 12px;border-radius:12px;border:1px solid transparent;transition:all .3s ease}
+    .nav a.link:hover{border-color:var(--line);background:#121621;transform:translateY(-2px)}
+
+    .hero{padding:60px 0;text-align:center}
+    .hero h1{font-size:clamp(28px,4vw,48px);margin:0 0 12px;color:var(--accent)}
+    .hero p{color:var(--muted);margin:0 0 20px;font-size:16px}
+
+    .section{padding:50px 0}
+    .section h2{font-size:clamp(22px,3vw,32px);margin-bottom:16px}
+    .section p.lead{color:var(--muted);margin-bottom:24px}
+
+    .grid{display:grid;gap:16px}
+    @media(min-width:720px){.grid.cols-3{grid-template-columns:repeat(3,1fr)}.grid.cols-2{grid-template-columns:repeat(2,1fr)}}
+
+    .card{background:linear-gradient(180deg,#121621,#0e121a);border:1px solid var(--line);border-radius:var(--radius);padding:20px;box-shadow:var(--shadow);transition:transform .3s ease,box-shadow .3s ease}
+    .card:hover{transform:translateY(-6px);box-shadow:0 15px 35px rgba(0,0,0,.35)}
+    .eyebrow{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+    .tile h3{margin:6px 0 8px;font-size:18px}
+    .tile p{color:var(--muted);margin:0}
+
+    .gallery{display:grid;gap:12px;grid-template-columns:repeat(2,1fr);margin-top:20px}
+    @media(min-width:720px){.gallery{grid-template-columns:repeat(4,1fr)}}
+    .ph{aspect-ratio:4/3;border-radius:14px;background:linear-gradient(135deg,#1e2432,#0a0d14);border:1px solid var(--line);display:grid;place-items:center;color:#6c7183;font-size:13px}
+
+    .footer{padding:28px 0;border-top:1px solid var(--line);color:#8b93a7;font-size:14px;text-align:center}
+  </style>
+</head>
+<body>
+  <header>
+     <style>
+    .navbar {
+      background-color: #8b0000;
+      /* Deep red reflecting Tamil cultural colors */
+    }
+
+    /* Show dropdown on hover for nav bar */
+    .navbar-nav .dropdown:hover .dropdown-menu {
+      display: block;
+      margin-top: 0;
+    }
+
+    .navbar-nav .dropdown-menu {
+      margin-top: 0;
+    }
+
+    .navbar-brand,
+    .nav-link {
+      color: #fff !important;
+    }
+
+    .nav-link:hover {
+      color: #ffd700 !important;
+      /* Gold hover effect for Tamil cultural aesthetic */
+    }
+  </style>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Tamil Information Centre</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">முகப்பு</a>
+          </li>
+
+          <!-- ABOUT US -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="archiveDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">எங்களைப் பற்றி</a>
+
+            <ul class="dropdown-menu" aria-labelledby="archiveDropdown">
+              <li>
+                <a class="dropdown-item" href="about.html">எங்களைப் பற்றி</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="support.html">ஆதரவு தாருங்கள்</a>
+              </li>
+
+              <li>
+                <a class="dropdown-item" href="arts.html">கலை & பாரம்பரியம்</a>
+              </li>
+            </ul>
+          </li>
+
+          <!-- NEWS -->
+          <li class="nav-item">
+            <a class="nav-link" href="updates.html">செய்திகள்</a>
+          </li>
+
+          <!-- ARCHIVE CENTRE -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="archiveDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">ஆவண மையம்</a>
+            <ul class="dropdown-menu" aria-labelledby="archiveDropdown">
+              <li>
+                <a class="dropdown-item" href="archive.html">தொகுப்பு</a>
+              </li>
+              <li><a class="dropdown-item" href="identity.html">அடையாளப் பட்டியல்</a></li>
+              
+            </ul>
+          </li>
+
+          <!-- EXHIBITION & HERITAGE CENTRE -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="exhibitionDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">காட்சிப்பொறி மற்றும் பாரம்பரிய மையம்</a>
+            <ul class="dropdown-menu" aria-labelledby="exhibitionDropdown">
+              <li>
+                <a class="dropdown-item" href="exhibition.html">ToL காட்சி</a>
+              </li>
+              <li><a class="dropdown-item" href="culture.html">பாரம்பரிய மையம்</a></li>
+              <li><a class="dropdown-item" href="thing.html">பொருள் வழிகாட்டிகள்</a></li>
+              <li>
+                <a class="dropdown-item" href="history.html">வரலாற்று காலவரிசை</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="edu.html">கற்றல் பணிமுறைகள்</a>
+              </li>
+            </ul>
+          </li>
+
+          <!-- WHAT'S ON< -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="whatsOnDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">நிகழ்ச்சிகள்</a>
+            <ul class="dropdown-menu" aria-labelledby="whatsOnDropdown">
+              <li><a class="dropdown-item" href="resent.html">சமீபத்திய நிகழ்வுகள்</a></li>
+              <li>
+                <a class="dropdown-item" href="plan.html">திட்டங்கள் மற்றும் நிகழ்ச்சிகள்</a>
+              </li>
+              <li><a class="dropdown-item" href="help.html">ஒத்துழைப்பு</a></li>
+            </ul>
+          </li>
+
+          <!-- JOIN -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="joinDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">இணையவும்</a>
+            <ul class="dropdown-menu" aria-labelledby="joinDropdown">
+              <li>
+                <a class="dropdown-item" href="join.html">உறுப்பினர் பதிவு</a>
+              </li>
+              <li><a class="dropdown-item" href="donate.html">நன்கொடை</a></li>
+            </ul>
+          </li>
+
+          <!-- SHOP -->
+          <li class="nav-item">
+            <a class="nav-link" href="shop.html">கடை</a>
+          </li>
+
+          <!-- CONTACT -->
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">தொடர்பு</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  </header>
+
+  <section class="hero container" id="top">
+    <h1>பாரம்பரிய மையம்</h1>
+    <p style="color: white;">தமிழர் பண்பாட்டையும் மரபையும் பாதுகாப்பதும் பரப்புவதும் குறிக்கோளாக உருவாக்கப்பட்ட TIC பாரம்பரிய மையத்திற்கு வரவேற்கிறோம்.</p>
+  </section>
+
+  <section class="section container" id="about">
+    <h2>எங்கள் நோக்கம்</h2>
+    <p class="lead" style="color: white;">பாரம்பரிய மையம் பழங்கால சான்றுகள், கலாச்சாரப் பொருட்கள், ஆவணங்கள் மற்றும் கலைப் பொருட்களை ஒரே இடத்தில் சேமித்து, வரும் தலைமுறைக்கு வழங்கும் தளம்.</p>
+  </section>
+
+  <section class="section container" id="features">
+    <h2>பிரதான அம்சங்கள்</h2>
+    <div class="grid cols-3">
+      <div class="card tile">
+        <span class="eyebrow">சமூக வரலாறு</span>
+        <h3 style="color: white;">தமிழர் வாழ்க்கை முறைகள்</h3>
+        <p>இலங்கைத்தமிழர் சமூகத்தின் முக்கிய நிகழ்வுகள் மற்றும் வாழ்க்கை முறைகள்.</p>
+      </div>
+      <div class="card tile">
+        <span class="eyebrow">கலை & கைவினை</span>
+        <h3 style="color: white;">நாட்டுப்புற கலை</h3>
+        <p>இசை, நடனம், கோயில் கலை, கைவினைப் பொருட்கள்.</p>
+      </div>
+      <div class="card tile">
+        <span class="eyebrow">ஆவணங்கள் & புகைப்படங்கள்</span>
+        <h3 style="color: white;">வரலாற்றுச் சான்றுகள்</h3>
+        <p>பழங்கால ஆவணங்கள், புகைப்படங்கள் மற்றும் கல்வெட்டுகள்.</p>
+      </div>
+      <div class="card tile">
+        <span class="eyebrow">வாய்வழி வரலாறு</span>
+        <h3 style="color: white;">மூத்தோர் நினைவுகள்</h3>
+        <p>நேர்காணல்கள் மற்றும் சமூக நிகழ்வுகள் ஒலி/வீடியோ வடிவில்.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section container" id="gallery">
+    <h2>காட்சிகள்</h2>
+    <div class="gallery">
+      <div class="ph card">பழங்கால ஆவணங்கள்</div>
+      <div class="ph card">கைவினைப் பொருட்கள்</div>
+      <div class="ph card">கோவில் கலை</div>
+      <div class="ph card">வாய்வழி வரலாறு</div>
+      <div class="ph card">புகைப்படங்கள்</div>
+      <div class="ph card">சங்கிலி & கலாச்சார விளக்கங்கள்</div>
+      <div class="ph card">நாட்டுப்புற இசை & நடனம்</div>
+      <div class="ph card">பரம்பரை கலைச் சேமிப்பு</div>
+    </div>
+  </section>
+
+  <footer class="text-center">
+    <div class="container">
+      <p class="tamil-text">
+        தமிழ் தகவல் மையம் &copy; 2025, All rights reserved.
+      </p>
+      <p>
+        <a href="#" class="text-white">Sitemap</a> |
+        <a href="#" class="text-white">Privacy Policy</a> |
+        <a href="#" class="text-white">Terms and Conditions</a>
+      </p>
+      <p>
+        <a href="#" class="text-white mx-2">Facebook</a>
+        <a href="#" class="text-white mx-2">YouTube</a>
+        <a href="#" class="text-white mx-2">Twitter</a>
+      </p>
+    </div>
+  </footer>
+
+
+  <script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
+</body>
+</html>

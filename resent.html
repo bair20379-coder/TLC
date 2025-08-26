@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="ta">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>சமீபத்திய நிகழ்வுகள்</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Noto Sans Tamil', sans-serif;
+      background-color: #f4f6f9;
+    }
+    h2 {
+      text-align: center;
+      margin: 40px 0;
+      color: #2c3e50;
+      font-weight: bold;
+    }
+    .event-card {
+      border-radius: 15px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .event-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    }
+    .icon {
+      font-size: 2rem;
+      color: #007bff;
+    }
+  </style>
+</head>
+<body>
+
+     <style>
+      .navbar {
+        background-color: #8b0000; /* Deep red reflecting Tamil cultural colors */
+      }
+      /* Show dropdown on hover for nav bar */
+      .navbar-nav .dropdown:hover .dropdown-menu {
+        display: block;
+        margin-top: 0;
+      }
+      .navbar-nav .dropdown-menu {
+        margin-top: 0;
+      }
+
+      .navbar-brand,
+      .nav-link {
+        color: #fff !important;
+      }
+      .nav-link:hover {
+        color: #ffd700 !important; /* Gold hover effect for Tamil cultural aesthetic */
+      }
+    </style>
+    <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Tamil Information Centre</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">முகப்பு</a>
+          </li>
+
+          <!-- ABOUT US -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="archiveDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">எங்களைப் பற்றி</a>
+
+            <ul class="dropdown-menu" aria-labelledby="archiveDropdown">
+              <li>
+                <a class="dropdown-item" href="about.html">எங்களைப் பற்றி</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="support.html">ஆதரவு தாருங்கள்</a>
+              </li>
+
+              <li>
+                <a class="dropdown-item" href="arts.html">கலை & பாரம்பரியம்</a>
+              </li>
+            </ul>
+          </li>
+
+          <!-- NEWS -->
+          <li class="nav-item">
+            <a class="nav-link" href="updates.html">செய்திகள்</a>
+          </li>
+
+          <!-- ARCHIVE CENTRE -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="archiveDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">ஆவண மையம்</a>
+            <ul class="dropdown-menu" aria-labelledby="archiveDropdown">
+              <li>
+                <a class="dropdown-item" href="archive.html">தொகுப்பு</a>
+              </li>
+              <li><a class="dropdown-item" href="identity.html">அடையாளப் பட்டியல்</a></li>
+              
+            </ul>
+          </li>
+
+          <!-- EXHIBITION & HERITAGE CENTRE -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="exhibitionDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">காட்சிப்பொறி மற்றும் பாரம்பரிய மையம்</a>
+            <ul class="dropdown-menu" aria-labelledby="exhibitionDropdown">
+              <li>
+                <a class="dropdown-item" href="exhibition.html">ToL காட்சி</a>
+              </li>
+              <li><a class="dropdown-item" href="culture.html">பாரம்பரிய மையம்</a></li>
+              <li><a class="dropdown-item" href="thing.html">பொருள் வழிகாட்டிகள்</a></li>
+              <li>
+                <a class="dropdown-item" href="history.html">வரலாற்று காலவரிசை</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="edu.html">கற்றல் பணிமுறைகள்</a>
+              </li>
+            </ul>
+          </li>
+
+          <!-- WHAT'S ON< -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="whatsOnDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">நிகழ்ச்சிகள்</a>
+            <ul class="dropdown-menu" aria-labelledby="whatsOnDropdown">
+              <li><a class="dropdown-item" href="resent.html">சமீபத்திய நிகழ்வுகள்</a></li>
+              <li>
+                <a class="dropdown-item" href="plan.html">திட்டங்கள் மற்றும் நிகழ்ச்சிகள்</a>
+              </li>
+              <li><a class="dropdown-item" href="help.html">ஒத்துழைப்பு</a></li>
+            </ul>
+          </li>
+
+          <!-- JOIN -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="joinDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">இணையவும்</a>
+            <ul class="dropdown-menu" aria-labelledby="joinDropdown">
+              <li>
+                <a class="dropdown-item" href="join.html">உறுப்பினர் பதிவு</a>
+              </li>
+              <li><a class="dropdown-item" href="donate.html">நன்கொடை</a></li>
+            </ul>
+          </li>
+
+          <!-- SHOP -->
+          <li class="nav-item">
+            <a class="nav-link" href="shop.html">கடை</a>
+          </li>
+
+          <!-- CONTACT -->
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">தொடர்பு</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+  <div class="container py-5">
+    <h2 data-aos="fade-down">📌 சமீபத்திய நிகழ்வுகள்</h2>
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-4" data-aos="fade-up">
+        <div class="card event-card shadow-sm p-3 h-100 text-center">
+          <div class="icon mb-3">🎤</div>
+          <h5 class="fw-bold">கருத்தரங்கம்</h5>
+          <p>தமிழர் உரிமைகள் மற்றும் சமகால சவால்கள்.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="card event-card shadow-sm p-3 h-100 text-center">
+          <div class="icon mb-3">📚</div>
+          <h5 class="fw-bold">பயிற்சி முகாம்</h5>
+          <p>இளைஞர்களுக்கான மனித உரிமை விழிப்புணர்வு.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="card event-card shadow-sm p-3 h-100 text-center">
+          <div class="icon mb-3">🎭</div>
+          <h5 class="fw-bold">பண்பாட்டு இரவு</h5>
+          <p>தமிழ் இசை, நடனம் மற்றும் இலக்கிய நிகழ்ச்சிகள்.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
+        <div class="card event-card shadow-sm p-3 h-100 text-center">
+          <div class="icon mb-3">🌍</div>
+          <h5 class="fw-bold">சர்வதேச ஒத்துழைப்பு</h5>
+          <p>வெளிநாட்டு அமைப்புகளுடன் இணைந்து நடத்திய கருத்துப்பரிமாற்றங்கள்.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="400">
+        <div class="card event-card shadow-sm p-3 h-100 text-center">
+          <div class="icon mb-3">🕊</div>
+          <h5 class="fw-bold">அமைதிக்கான நடைபயணம்</h5>
+          <p>சமூக ஒற்றுமை மற்றும் சமாதானத்தை வலியுறுத்தும் நிகழ்வு.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="text-center" style="background-color: #8b0000; width: 100%;">
+      <div class="container">
+        <p class="tamil-text" style="color: #fff;">
+          தமிழ் தகவல் மையம் &copy; 2025, All rights reserved.
+        </p>
+        <p>
+          <a href="#" class="text-white">Sitemap</a> |
+          <a href="#" class="text-white">Privacy Policy</a> |
+          <a href="#" class="text-white">Terms and Conditions</a>
+        </p>
+        <p>
+          <a href="#" class="text-white mx-2">Facebook</a>
+          <a href="#" class="text-white mx-2">YouTube</a>
+          <a href="#" class="text-white mx-2">Twitter</a>
+        </p>
+      </div>
+    </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 1200 });
+  </script>
+</body>
+</html>

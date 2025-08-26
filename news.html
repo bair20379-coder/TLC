@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Tamil Information Centre - Tamil Cultural Festival"
+    />
+    <meta
+      name="keywords"
+      content="Tamil Information Centre, News, Tamil Culture, Festival"
+    />
+    <title>Tamil Information Centre :: Tamil Cultural Festival</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Google Fonts for Tamil (Noto Serif Tamil) -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif+Tamil:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/globle.css" />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        font-size: small;
+        background-color: #f8f9fa;
+        color: #333;
+      }
+      .navbar {
+        background-color: #8b0000;
+        padding: 15px 0;
+      }
+      .navbar-brand,
+      .nav-link {
+        color: #fff !important;
+      }
+      .nav-link:hover {
+        color: #ffd700 !important;
+      }
+      .navbar-toggler {
+        border: none;
+      }
+      .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+      }
+      .header-section {
+        background-color: #8b0000;
+        color: white;
+        padding: 50px 0;
+        text-align: center;
+      }
+      .news-card {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        margin-bottom: 20px;
+      }
+      .news-card h1 {
+        font-size: 1.8rem;
+        margin-bottom: 10px;
+        color: #8b0000;
+      }
+      .news-card .news-date {
+        color: #6c757d;
+        font-size: 0.9rem;
+        margin-bottom: 15px;
+      }
+      .news-card .news-content {
+        line-height: 1.6;
+      }
+      .lang-switcher {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+      }
+      .lang-switcher a {
+        color: #fff;
+        text-decoration: none;
+        margin-left: 10px;
+      }
+      .lang-switcher a:hover {
+        color: #ffd700;
+      }
+      footer {
+        background-color: #8b0000;
+        color: white;
+        padding: 20px 0;
+        text-align: center;
+      }
+      footer a {
+        color: #fff;
+        text-decoration: none;
+        margin: 0 10px;
+      }
+      footer a:hover {
+        color: #ffd700;
+      }
+      @media (max-width: 768px) {
+        .header-section {
+          padding: 30px 0;
+        }
+        .news-card h1 {
+          font-size: 1.5rem;
+        }
+        .main-content {
+          padding: 20px 10px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Toast Container -->
+    <div id="toast-container" class="toast-container"></div>
+
+    <!-- Language Switcher -->
+    <div class="lang-switcher">
+      <a href="#" onclick="switchLanguage('en')" aria-label="Switch to English"
+        >English</a
+      >
+      |
+      <a href="#" onclick="switchLanguage('ta')" aria-label="Switch to Tamil"
+        >Tamil</a
+      >
+    </div>
+
+    
+    <!-- Nav bar style -->
+    <style>
+      .navbar {
+        background-color: #8b0000; /* Deep red reflecting Tamil cultural colors */
+      }
+      /* Show dropdown on hover for nav bar */
+      .navbar-nav .dropdown:hover .dropdown-menu {
+        display: block;
+        margin-top: 0;
+      }
+      .navbar-nav .dropdown-menu {
+        margin-top: 0;
+      }
+
+      .navbar-brand,
+      .nav-link {
+        color: #fff !important;
+      }
+      .nav-link:hover {
+        color: #ffd700 !important; /* Gold hover effect for Tamil cultural aesthetic */
+      }
+    </style>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Tamil Information Centre</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">முகப்பு</a>
+          </li>
+
+          <!-- ABOUT US -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="archiveDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">எங்களைப் பற்றி</a>
+
+            <ul class="dropdown-menu" aria-labelledby="archiveDropdown">
+              <li>
+                <a class="dropdown-item" href="about.html">எங்களைப் பற்றி</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="support.html">ஆதரவு தாருங்கள்</a>
+              </li>
+
+              <li>
+                <a class="dropdown-item" href="arts.html">கலை & பாரம்பரியம்</a>
+              </li>
+            </ul>
+          </li>
+
+          <!-- NEWS -->
+          <li class="nav-item">
+            <a class="nav-link" href="updates.html">செய்திகள்</a>
+          </li>
+
+          <!-- ARCHIVE CENTRE -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="archiveDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">ஆவண மையம்</a>
+            <ul class="dropdown-menu" aria-labelledby="archiveDropdown">
+              <li>
+                <a class="dropdown-item" href="archive.html">தொகுப்பு</a>
+              </li>
+              <li><a class="dropdown-item" href="identity.html">அடையாளப் பட்டியல்</a></li>
+              
+            </ul>
+          </li>
+
+          <!-- EXHIBITION & HERITAGE CENTRE -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="exhibitionDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">காட்சிப்பொறி மற்றும் பாரம்பரிய மையம்</a>
+            <ul class="dropdown-menu" aria-labelledby="exhibitionDropdown">
+              <li>
+                <a class="dropdown-item" href="exhibition.html">ToL காட்சி</a>
+              </li>
+              <li><a class="dropdown-item" href="culture.html">பாரம்பரிய மையம்</a></li>
+              <li><a class="dropdown-item" href="thing.html">பொருள் வழிகாட்டிகள்</a></li>
+              <li>
+                <a class="dropdown-item" href="history.html">வரலாற்று காலவரிசை</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="edu.html">கற்றல் பணிமுறைகள்</a>
+              </li>
+            </ul>
+          </li>
+
+          <!-- WHAT'S ON< -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="whatsOnDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">நிகழ்ச்சிகள்</a>
+            <ul class="dropdown-menu" aria-labelledby="whatsOnDropdown">
+              <li><a class="dropdown-item" href="resent.html">சமீபத்திய நிகழ்வுகள்</a></li>
+              <li>
+                <a class="dropdown-item" href="plan.html">திட்டங்கள் மற்றும் நிகழ்ச்சிகள்</a>
+              </li>
+              <li><a class="dropdown-item" href="help.html">ஒத்துழைப்பு</a></li>
+            </ul>
+          </li>
+
+          <!-- JOIN -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="joinDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">இணையவும்</a>
+            <ul class="dropdown-menu" aria-labelledby="joinDropdown">
+              <li>
+                <a class="dropdown-item" href="join.html">உறுப்பினர் பதிவு</a>
+              </li>
+              <li><a class="dropdown-item" href="donate.html">நன்கொடை</a></li>
+            </ul>
+          </li>
+
+          <!-- SHOP -->
+          <li class="nav-item">
+            <a class="nav-link" href="shop.html">கடை</a>
+          </li>
+
+          <!-- CONTACT -->
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">தொடர்பு</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+    <!-- Header Section -->
+    <section class="header-section">
+      <div class="container">
+        <h1>Tamil Cultural Festival 2025</h1>
+        <p>Discover the vibrant celebration of Tamil heritage in Colombo</p>
+      </div>
+    </section>
+
+    <style>
+      .img-card {
+        box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+          rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+        width: 60%;
+        height: 50%;
+        margin: 2%;
+      }
+
+      .section-title {
+        font-weight: bold;
+        color: #b30000;
+        font-size: 20px;
+        padding-top: 10px;
+      }
+      .news-img {
+        width: 100px;
+        height: 70px;
+        margin-right: 10px;
+      }
+      .news-title {
+        font-size: 16px;
+        font-weight: 500;
+        margin-bottom: 4px;
+      }
+      .news-time {
+        font-size: 12px;
+        color: gray;
+      }
+    </style>
+
+    <!-- Content Section -->
+    <section style="margin-top: 2%">
+      <div class="row">
+        <div class="col-md-8 mx-auto">
+          <div class="news-card">
+            <h1>Tamil Cultural Festival 2025</h1>
+            <hr class="mt-0" style="border-top: 2px solid #b30000" />
+            <div class="news-date">Published Date: 01/08/2025</div>
+            <div>
+              <img class="img-card" src="./images/lanka2.jpg" alt="img" />
+            </div>
+            <div class="news-content">
+              <p>
+                Attacks on media organisations, particularly the Tamil media and
+                intimidation and harassment of journalists continue in Sri Lanka
+                irrespective of assurance given by the police to find and punish
+                perpetrators.
+              </p>
+              <p>
+                The attack on the Uthayan newspaper office is the fifth attack
+                on the media in the north, since January and the second after
+                the United Nations passed a resolution on March 21 calling on
+                the government to address human rights violations.
+              </p>
+              <p>
+                Armed men stormed the Uthayan Tamil newspaper office in
+                Kasthuriyar road in Jaffna, yesterday at around 4.45am and set
+                fire to printing machines and newspapers ready for distribution.
+                This is the second attack on the paper this month. Few weeks ago
+                an unidentified group attacked the Kilinochchi office of the
+                Uthayan newspapers injuring at least three persons and damaging
+                a van. In January, a man delivering Uthayan newspapers in Jaffna
+                was attacked and his motorbike was set on fire. In July 2011,
+                Uthayan’s news editor Gnanasundaram Kuhanathan (59) was beaten
+                up using iron bars by unidentified men, and in May 2011, S.
+                Kavitharan, a reporter, was also attacked.
+              </p>
+              <p>
+                Proprietor of the newspaper Saravanapavan said three men with
+                guns entered the press room and threatened and chased away
+                workers and delivery men. The staff was preparing to distribute
+                the newspapers when the gang entered the premises. They then
+                shot at a control panel and then poured petrol and set fire to
+                the machines, newspapers and newsprint. He said the estimated
+                loss was around Rs 2million.
+              </p>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Voluptas molestias enim fugiat beatae, excepturi quia ea impedit
+                nulla distinctio fuga ipsam soluta. Dolorem consequuntur
+                voluptas doloremque earum accusantium amet sit.
+              </p>
+            </div>
+
+            <div class="news-content">
+              <!-- Section Title -->
+              <div class="section-title">
+                Latest 25 News / பிந்திய 25 செய்திகள்
+              </div>
+              <hr class="mt-0" style="border-top: 2px solid #b30000" />
+
+              <!-- News Item 1 -->
+              <a href="news.html" style="text-decoration: none">
+                <div
+                  class="news-card"
+                  style="display: flex; flex-direction: row"
+                >
+                  <img
+                    src="./images/lanka1.jpg"
+                    class="news-img"
+                    alt="News 1"
+                  />
+                  <div>
+                    <div class="news-title">
+                      The future of Sri Lankan Tamils and the lndo-Lanka Accord
+                      of 29th Julv 1987
+                    </div>
+                    <div class="news-time">
+                      Published Date: 13/04/2013 (Monday)
+                    </div>
+                  </div>
+                </div>
+              </a>
+
+              <!-- News Item 2 -->
+              <a href="news.html" style="text-decoration: none">
+                <div
+                  class="news-card"
+                  style="display: flex; flex-direction: row"
+                >
+                  <img
+                    src="./images/lanka1.jpg"
+                    class="news-img"
+                    alt="News 1"
+                  />
+                  <div>
+                    <div class="news-title">
+                      The future of Sri Lankan Tamils and the lndo-Lanka Accord
+                      of 29th Julv 1987
+                    </div>
+                    <div class="news-time">
+                      Published Date: 13/04/2013 (Monday)
+                    </div>
+                  </div>
+                </div>
+              </a>
+
+              <!-- News Item 3 -->
+              <a href="news.html" style="text-decoration: none">
+                <div
+                  class="news-card"
+                  style="display: flex; flex-direction: row"
+                >
+                  <img
+                    src="./images/lanka1.jpg"
+                    class="news-img"
+                    alt="News 1"
+                  />
+                  <div>
+                    <div class="news-title">
+                      The future of Sri Lankan Tamils and the lndo-Lanka Accord
+                      of 29th Julv 1987
+                    </div>
+                    <div class="news-time">
+                      Published Date: 13/04/2013 (Monday)
+                    </div>
+                  </div>
+                </div>
+              </a>
+
+              <!-- News Item 4 -->
+              <a href="news.html" style="text-decoration: none">
+                <div
+                  class="news-card"
+                  style="display: flex; flex-direction: row"
+                >
+                  <img
+                    src="./images/lanka1.jpg"
+                    class="news-img"
+                    alt="News 1"
+                  />
+                  <div>
+                    <div class="news-title">
+                      The future of Sri Lankan Tamils and the lndo-Lanka Accord
+                      of 29th Julv 1987
+                    </div>
+                    <div class="news-time">
+                      Published Date: 13/04/2013 (Monday)
+                    </div>
+                  </div>
+                </div>
+              </a>
+
+              <!-- end .news-card -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center">
+      <div class="container">
+        <p>Tamil Information Centre &copy; 2025, All rights reserved.</p>
+        <p>
+          <a href="#" class="text-white">Sitemap</a> |
+          <a href="#" class="text-white">Privacy Policy</a> |
+          <a href="#" class="text-white">Terms and Conditions</a>
+        </p>
+        <p>
+          <a href="#" class="text-white mx-2">Facebook</a>
+          <a href="#" class="text-white mx-2">YouTube</a>
+          <a href="#" class="text-white mx-2">Twitter</a>
+        </p>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JS and Language Switcher Script -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      function switchLanguage(lang) {
+        alert("Switching to " + (lang === "en" ? "English" : "Tamil"));
+        // Implement actual language switching logic here
+      }
+    </script>
+  </body>
+  <script src="./js/protect.js"></script>
+</html>

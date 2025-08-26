@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="ta">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>TIC | ஒத்துழைப்பு (Collaboration)</title>
+  <meta name="description" content="Tamil Information Centre – Collaboration page for partnerships with NGOs, universities, cultural bodies and community groups." />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Tamil:wght@400;600;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+    :root{
+      --bg:#0f1115;--card:#151923;--accent:#8b5cf6;--accent-2:#22d3ee;--text:#e7e9ee;--muted:#aab0bf;--line:#232a3a;--ok:#10b981;--warn:#f59e0b
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    /* body{margin:0;background:radial-gradient(1200px 500px at 80% -10%,rgba(176, 180, 180, 0.18),transparent),
+                  radial-gradient(1200px 500px at -10% 20%,rgba(139,92,246,.18),transparent),var(--bg);
+         color:var(--text);font-family:"Noto Sans Tamil", Inter, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Helvetica, Arial} */
+    a{color:inherit;text-decoration:none}
+    /* .container{width:min(1100px,92vw);margin-inline:auto} */
+    header{position:sticky;top:0;z-index:50;background:rgba(15,17,21,.75);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+    .nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0;animation:fadeInDown 1s ease}
+    .brand{display:flex;gap:12px;align-items:center;font-weight:700}
+    .brand i{width:36px;height:36px;border-radius:10px;background:linear-gradient(135deg,var(--accent),var(--accent-2));display:inline-grid;place-items:center;color:#081018;box-shadow:0 10px 30px rgba(0,0,0,.25)}
+    .nav a.link{padding:8px 12px;border-radius:12px;border:1px solid transparent;transition:all .3s ease}
+    .nav a.link:hover{border-color:var(--line);background:#121621;transform:translateY(-2px)}
+
+    .hero{position:relative;padding:70px 0 50px;overflow:hidden;text-align:center}
+    .hero h1{font-size:clamp(28px,4vw,46px);line-height:1.15;margin:0 0 10px;animation:slideIn .9s ease}
+    .hero p{color:var(--muted);margin:0 auto;max-width:820px;animation:fadeIn 1.2s ease}
+    .tag{display:inline-flex;gap:8px;align-items:center;padding:8px 12px;border:1px solid var(--line);border-radius:999px;color:var(--muted);font-size:13px;margin-bottom:14px;opacity:0;animation:fadeIn 1s ease forwards}
+    .cta{display:flex;gap:12px;margin-top:22px;justify-content:center}
+    .btn{padding:12px 16px;border-radius:14px;border:1px solid var(--line);background:#121621;color:var(--text);cursor:pointer;transition:transform .3s ease}
+    .btn.primary{background:linear-gradient(135deg,var(--accent),var(--accent-2));color:#081018;border:none;font-weight:700}
+    .btn:hover{transform:translateY(-2px)}
+
+    .section{padding:56px 0}
+    .section h2{font-size:clamp(22px,3vw,32px);margin:0 0 14px}
+    .lead{color:var(--muted);margin:0 0 24px}
+
+    .grid{display:grid;gap:16px}
+    @media(min-width:720px){.grid.cols-3{grid-template-columns:repeat(3,1fr)}.grid.cols-2{grid-template-columns:repeat(2,1fr)}}
+
+    .card{background:linear-gradient(180deg,#121621,#0e121a);border:1px solid var(--line);border-radius:18px;box-shadow:0 10px 30px rgba(0,0,0,.25);padding:18px;transition:transform .3s ease, box-shadow .3s ease;opacity:0;animation:fadeInUp .8s ease forwards}
+    .card:hover{transform:translateY(-6px);box-shadow:0 15px 35px rgba(0,0,0,.35)}
+    .eyebrow{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+    .chip{display:inline-block;padding:6px 10px;border-radius:999px;border:1px solid var(--line);font-size:12px;color:var(--muted)}
+
+    .steps{counter-reset:step}
+    .step{display:flex;gap:14px;align-items:flex-start}
+    .step::before{counter-increment:step;content:counter(step);flex:0 0 34px;height:34px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(135deg,var(--accent),var(--accent-2));color:#081018;font-weight:700}
+
+    .logos{display:grid;gap:12px;grid-template-columns:repeat(2,1fr)}
+    @media(min-width:720px){.logos{grid-template-columns:repeat(6,1fr)}}
+    .logo{height:54px;border-radius:12px;border:1px dashed #2a3247;display:grid;place-items:center;color:#778;opacity:.9;background:#0f131c}
+
+    .faq details{background:#101521;border:1px solid var(--line);border-radius:14px;padding:12px}
+    .faq summary{cursor:pointer;font-weight:600}
+
+    .footer{padding:28px 0;border-top:1px solid var(--line);color:#8b93a7;font-size:14px;text-align:center}
+
+    @keyframes fadeInUp{0%{opacity:0;transform:translateY(18px)}100%{opacity:1;transform:translateY(0)}}
+    @keyframes fadeIn{0%{opacity:0}100%{opacity:1}}
+    @keyframes slideIn{0%{opacity:0;transform:translateY(40px)}100%{opacity:1;transform:translateY(0)}}
+  </style>
+</head>
+<body>
+  <header>
+     <style>
+      .navbar {
+        background-color: #8b0000; /* Deep red reflecting Tamil cultural colors */
+      }
+      /* Show dropdown on hover for nav bar */
+      .navbar-nav .dropdown:hover .dropdown-menu {
+        display: block;
+        margin-top: 0;
+      }
+      .navbar-nav .dropdown-menu {
+        margin-top: 0;
+      }
+
+      .navbar-brand,
+      .nav-link {
+        color: #fff !important;
+      }
+      .nav-link:hover {
+        color: #ffd700 !important; /* Gold hover effect for Tamil cultural aesthetic */
+      }
+    </style>
+    <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Tamil Information Centre</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">முகப்பு</a>
+          </li>
+
+          <!-- ABOUT US -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="archiveDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">எங்களைப் பற்றி</a>
+
+            <ul class="dropdown-menu" aria-labelledby="archiveDropdown">
+              <li>
+                <a class="dropdown-item" href="about.html">எங்களைப் பற்றி</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="support.html">ஆதரவு தாருங்கள்</a>
+              </li>
+
+              <li>
+                <a class="dropdown-item" href="arts.html">கலை & பாரம்பரியம்</a>
+              </li>
+            </ul>
+          </li>
+
+          <!-- NEWS -->
+          <li class="nav-item">
+            <a class="nav-link" href="updates.html">செய்திகள்</a>
+          </li>
+
+          <!-- ARCHIVE CENTRE -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="archiveDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">ஆவண மையம்</a>
+            <ul class="dropdown-menu" aria-labelledby="archiveDropdown">
+              <li>
+                <a class="dropdown-item" href="archive.html">தொகுப்பு</a>
+              </li>
+              <li><a class="dropdown-item" href="identity.html">அடையாளப் பட்டியல்</a></li>
+              
+            </ul>
+          </li>
+
+          <!-- EXHIBITION & HERITAGE CENTRE -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="exhibitionDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">காட்சிப்பொறி மற்றும் பாரம்பரிய மையம்</a>
+            <ul class="dropdown-menu" aria-labelledby="exhibitionDropdown">
+              <li>
+                <a class="dropdown-item" href="exhibition.html">ToL காட்சி</a>
+              </li>
+              <li><a class="dropdown-item" href="culture.html">பாரம்பரிய மையம்</a></li>
+              <li><a class="dropdown-item" href="thing.html">பொருள் வழிகாட்டிகள்</a></li>
+              <li>
+                <a class="dropdown-item" href="history.html">வரலாற்று காலவரிசை</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="edu.html">கற்றல் பணிமுறைகள்</a>
+              </li>
+            </ul>
+          </li>
+
+          <!-- WHAT'S ON< -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="whatsOnDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">நிகழ்ச்சிகள்</a>
+            <ul class="dropdown-menu" aria-labelledby="whatsOnDropdown">
+              <li><a class="dropdown-item" href="resent.html">சமீபத்திய நிகழ்வுகள்</a></li>
+              <li>
+                <a class="dropdown-item" href="plan.html">திட்டங்கள் மற்றும் நிகழ்ச்சிகள்</a>
+              </li>
+              <li><a class="dropdown-item" href="help.html">ஒத்துழைப்பு</a></li>
+            </ul>
+          </li>
+
+          <!-- JOIN -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="joinDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">இணையவும்</a>
+            <ul class="dropdown-menu" aria-labelledby="joinDropdown">
+              <li>
+                <a class="dropdown-item" href="join.html">உறுப்பினர் பதிவு</a>
+              </li>
+              <li><a class="dropdown-item" href="donate.html">நன்கொடை</a></li>
+            </ul>
+          </li>
+
+          <!-- SHOP -->
+          <li class="nav-item">
+            <a class="nav-link" href="shop.html">கடை</a>
+          </li>
+
+          <!-- CONTACT -->
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">தொடர்பு</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  </header>
+
+  <section class="hero container" id="top">
+    <span class="tag">Since 1983 • Collaboration</span>
+    <h1>ஒத்துழைப்பால் வலுப்படும் <span style="background:linear-gradient(135deg,var(--accent),var(--accent-2));-webkit-background-clip:text;background-clip:text;color:transparent">தமிழர் எதிர்காலம்</span></h1>
+    <p>உலகளாவிய அமைப்புகள், பல்கலைக்கழகங்கள், பண்பாட்டு நிறுவனங்கள், சமூகக் குழுக்கள் மற்றும் மனித உரிமை வலையமைப்புகளுடன் இணைந்து, தமிழர் சமூகத்தின் உரிமைகள், கல்வி, மற்றும் பாரம்பரியப் பாதுகாப்பை முன்னெடுத்துச் செல்ல TIC தயாராக இருக்கிறது.</p>
+    <div class="cta">
+      <a class="btn primary" href="#contact">பங்காளியாக இணைவோம்</a>
+      <a class="btn" href="#areas">எங்கள் முன்னுரிமைகள்</a>
+    </div>
+  </section>
+
+  <section class="section container" id="why">
+    <h2>ஏன் ஒத்துழைப்பு?</h2>
+    <p class="lead">ஒருங்கிணைந்த வளங்கள் • பகிர்ந்த அறிவு • நீடித்த தாக்கம்.</p>
+    <div class="grid cols-3">
+      <div class="card">
+        <div class="eyebrow">Impact</div>
+        <h3 style="color: whitesmoke;">அளவுபடுத்தப்பட்ட சமூகத் தாக்கம்</h3>
+        <p style="color: whitesmoke;">கூட்டணிகள் மூலம் திட்டங்கள் விரைவாகவும் விரிவாகவும் மக்களை அடையும்.</p>
+      </div>
+      <div class="card">
+        <div class="eyebrow">Access</div>
+        <h3 style="color: whitesmoke;">அறிவு & வளங்களின் பகிர்வு</h3>
+        <p style="color: whitesmoke;">ஆராய்ச்சி தரவுகள், டிஜிட்டல் காப்பகங்கள் மற்றும் பயிற்சி வளங்களின் திறந்த அணுகல்.</p>
+      </div>
+      <div class="card">
+        <div class="eyebrow">Trust</div>
+        <h3 style="color: whitesmoke;">நம்பகமான வலையமைப்பு</h3>
+        <p style="color: whitesmoke;">உலகளாவிய பங்காளிகளுடன் நீண்டகால ஒத்துழைப்பின் அனுபவம்.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section container" id="areas">
+    <h2>கவனம் செலுத்தும் துறைகள்</h2>
+    <p class="lead">மனித உரிமைகள், கல்வி, கலை & பாரம்பரியம், இளைஞர் முன்னேற்றம், பெண்கள் அதிகாரமளித்தல்.</p>
+    <div class="grid cols-3" >
+      <div class="card" style="color: whitesmoke;"><span class="chip">Human Rights</span><h3>உரிமை பாதுகாப்பு</h3><p>ஆவணப்படுத்தல், சட்ட ஆதரவு வலைப்பிணைப்பு, விழிப்புணர்வு முகாம்கள்.</p></div>
+      <div class="card" style="color: whitesmoke;"><span class="chip">Education</span><h3>கல்வி & ஆராய்ச்சி</h3><p>பாடத் தொகுப்புகள், பயிற்சிகள், fellowships, தரவுத்தள அணுகல்.</p></div>
+      <div class="card" style="color: whitesmoke;"><span class="chip">Culture</span><h3>கலை & பாரம்பரியம்</h3><p>டிஜிட்டல் காப்பகம், நிகழ்வுகள், களஆய்வு, ஆவணப்படம் தயாரிப்பு.</p></div>
+      <div class="card" style="color: whitesmoke;"><span class="chip">Youth</span><h3>இளைஞர் திட்டங்கள்</h3><p>திறன் மேம்பாடு, internship, volunteer network.</p></div>
+      <div class="card" style="color: whitesmoke;"><span class="chip">Women</span><h3>பெண்கள் அதிகாரமளித்தல்</h3><p>நெட்வொர்க், வழிகாட்டல், பாதுகாப்பு & உரிமை பயிற்சிகள்.</p></div>
+      <div class="card" style="color: whitesmoke;"><span class="chip">Community</span><h3>சமூக முன்னேற்றம்</h3><p>சுகாதாரம், வாழ்வாதாரம், மனநலம் விழிப்புணர்வு.</p></div>
+    </div>
+  </section>
+
+  <section class="section container" id="models">
+    <h2>கூட்டாண்மை மாடல்கள்</h2>
+    <p class="lead">உங்கள் அமைப்பின் தேவைக்கு ஏற்ப இணைச் செயல்பாட்டு வடிவுகள்.</p>
+    <div class="grid cols-3">
+      <div class="card" style="color: whitesmoke;"><h3>MoU கூட்டாண்மை</h3><p>சர்வதேச/உள்நாட்டு நிறுவனங்களுடன் நீடித்த திட்டங்களுக்கு உத்தியோகபூர்வ ஒப்பந்தம்.</p></div>
+      <div class="card" style="color: whitesmoke;"><h3>திட்ட அடிப்படையிலான இணைப்பு</h3><p>நிரந்தரக் குழுக்கள், காலக்கட்ட & இலக்கு அடிப்படையிலான திட்டங்கள்.</p></div>
+      <div class="card" style="color: whitesmoke;"><h3>அறிவு பகிர்வு கூட்டமைப்பு</h3><p>வெபினார்கள், ஆராய்ச்சி வெளியீடுகள், திறந்த தரவுக் களஞ்சியங்கள்.</p></div>
+    </div>
+  </section>
+
+  <section class="section container" id="how">
+    <h2>எப்படி இணைவது</h2>
+    <p class="lead">நான்கு எளிய படிகள்.</p>
+    <div class="grid cols-2 steps">
+      <div class="card step" style="color: whitesmoke;"><div><h3>தொடர்பு கொள்ளுதல்</h3><p>உங்கள் இலக்குகள்/துறைகள் பற்றிய குறுநிருபத்தை அனுப்பவும்.</p></div></div>
+      <div class="card step" style="color: whitesmoke;"><div><h3>தேவை & பொருத்தம்</h3><p>முக்கியப் பயனாளர்கள், காலக்கொடுகள், அளவீடுகள் ஆகியவற்றை இணைந்து வரையறை செய்வோம்.</p></div></div>
+      <div class="card step" style="color: whitesmoke;"><div><h3>ஒப்பந்தம் & திட்டமிடல்</h3><p>MoU/SoP, பொறுப்புகள், திட்ட வரைபடம், கண்காணிப்பு முறைகள்.</p></div></div>
+      <div class="card step" style="color: whitesmoke;"><div><h3>இணைச் செயலாக்கம்</h3><p>செயலாக்கம், தர அளவீடு, தாக்கம் மதிப்பீடு மற்றும் அறிக்கையிடல்.</p></div></div>
+    </div>
+  </section>
+
+  <section class="section container" aria-label="Partner Logos">
+    <h2>சாத்தியமான பங்காளிகள்</h2>
+    <p class="lead">NGO/INGO • பல்கலைக்கழகம் • கலாச்சார நிறுவனம் • நிதியாளர்கள் • சமூகக் குழுக்கள்.</p>
+    <div class="logos">
+      <div class="logo">Logo 1</div>
+      <div class="logo">Logo 2</div>
+      <div class="logo">Logo 3</div>
+      <div class="logo">Logo 4</div>
+      <div class="logo">Logo 5</div>
+      <div class="logo">Logo 6</div>
+    </div>
+  </section>
+
+  <section class="section container faq" id="faq">
+    <h2>அடிக்கடி கேட்கப்படும் கேள்விகள்</h2>
+    <div class="grid cols-2">
+      <details class="card" style="color: whitesmoke;"><summary>நாங்கள் சிறிய அமைப்பு. எங்களுக்கும் வாய்ப்பு உள்ளதா?</summary><p>கண்டிப்பாக. திட்ட அளவிற்கு ஏற்ப flexible models வழங்குகிறோம்.</p></details>
+      <details class="card" style="color: whitesmoke;"><summary>கூட்டாண்மைக்கு நிதி அவசியமா?</summary><p>அவசியமில்லை. அறிவு/வளங்கள்/தன்னார்வம் மூலம் கூட இணையலாம்.</p></details>
+      <details class="card" style="color: whitesmoke;"><summary>தரவு பாதுகாப்பு எப்படி?</summary><p>நியாயம், வெளிப்படைத்தன்மை, தனியுரிமை கொள்கைகள் கடைப்பிடிக்கப்படும்.</p></details>
+      <details class="card" style="color: whitesmoke;"><summary>சான்றுகள்/MoU காலம்?</summary><p>திட்டத்தின் தன்மை மற்றும் காலக்கட்டத்தின் அடிப்படையில் தீர்மானிக்கப்படும்.</p></details>
+    </div>
+  </section>
+
+  <section class="section container" id="contact">
+    <h2>ஒத்துழைப்புக்காக தொடர்பு கொள்ளுங்கள்</h2>
+    <p class="lead">கீழே உங்கள் அமைப்புக் குறிப்புகளை பகிருங்கள். 48 மணி நேரத்தில் தொடர்பு கொள்கிறோம்.</p>
+    <form class="card" onsubmit="event.preventDefault(); thanks();">
+      <div class="grid cols-2" style="gap:12px">
+        <div>
+          <label for="org" class="eyebrow">அமைப்பின் பெயர்</label>
+          <input id="org" required placeholder="உங்கள் அமைப்பு" class="in" />
+        </div>
+        <div>
+          <label for="type" class="eyebrow">அமைப்பு வகை</label>
+          <select id="type" class="in">
+            <option>NGO/INGO</option>
+            <option>பல்கலைக்கழகம்</option>
+            <option>கலாச்சார நிறுவனம்</option>
+            <option>சமூகக் குழு</option>
+            <option>நிதியாளர்</option>
+          </select>
+        </div>
+        <div>
+          <label for="name" class="eyebrow">பெயர்</label>
+          <input id="name" required placeholder="தொடர்பு நபர்" class="in" />
+        </div>
+        <div>
+          <label for="email" class="eyebrow">Email</label>
+          <input id="email" type="email" required placeholder="name@example.org" class="in" />
+        </div>
+      </div>
+      <div style="margin-top:12px">
+        <label for="msg" class="eyebrow">குறுஞ்சுரை</label>
+        <textarea id="msg" rows="4" placeholder="உங்கள் இலக்குகள், துறைகள், காலக்கட்டம்…" class="in"></textarea>
+      </div>
+      <div style="display:flex;gap:12px;justify-content:flex-end;margin-top:14px">
+        <button type="reset" class="btn">Clear</button>
+        <button type="submit" class="btn primary">Submit</button>
+      </div>
+    </form>
+  </section>
+
+   <footer class="text-center " style="background-color:#8b0000; ">
+      <div class="container">
+        <p class="tamil-text" style="color: white;">
+          தமிழ் தகவல் மையம் &copy; 2025, All rights reserved.
+        </p>
+        <p>
+          <a href="#" class="text-white">Sitemap</a> |
+          <a href="#" class="text-white">Privacy Policy</a> |
+          <a href="#" class="text-white">Terms and Conditions</a>
+        </p>
+        <p>
+          <a href="#" class="text-white mx-2">Facebook</a>
+          <a href="#" class="text-white mx-2">YouTube</a>
+          <a href="#" class="text-white mx-2">Twitter</a>
+        </p>
+      </div>
+    </footer>
+
+  <style>
+    /* minimal form styling */
+    .in{width:100%;margin-top:6px;padding:12px 12px;border-radius:12px;border:1px solid var(--line);background:#0f131c;color:var(--text)}
+    .in:focus{outline:none;border-color:#2f3a52;box-shadow:0 0 0 3px rgba(139,92,246,.15)}
+  </style>
+  <script>
+    document.getElementById('yr').textContent = new Date().getFullYear();
+    function thanks(){
+      const org=document.getElementById('org').value||'உங்கள் அமைப்பு';
+      alert(org+" – உங்கள் தகவலை பெற்றுவிட்டோம். விரைவில் தொடர்பு கொள்கிறோம்.");
+    }
+  </script>
+</body>
+</html>
